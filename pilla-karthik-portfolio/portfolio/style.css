@@ -1,0 +1,659 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar {
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: #0f172a;
+}
+
+.logo span {
+    color: #2563eb;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #334155;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #2563eb;
+}
+
+.theme-button {
+    border: 1px solid #cbd5e1;
+    padding: 6px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #0f172a;
+}
+
+#theme,
+#menu {
+    display: none;
+}
+
+.menu-button {
+    display: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    background-color: #f8fafc;
+    padding: 90px 0 50px;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    align-items: center;
+    gap: 50px;
+}
+
+.small-heading,
+.section-title p,
+.number {
+    color: #2563eb;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    color: #0f172a;
+    margin: 5px 0;
+}
+
+.hero h1 span {
+    color: #2563eb;
+}
+
+.hero h2 {
+    font-size: 27px;
+    color: #334155;
+    margin-bottom: 15px;
+}
+
+.hero-text > p {
+    color: #475569;
+    max-width: 650px;
+}
+
+.buttons {
+    margin-top: 25px;
+}
+
+.button {
+    display: inline-block;
+    background-color: #2563eb;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 5px;
+    margin-right: 8px;
+}
+
+.button-light {
+    background-color: transparent;
+    color: #2563eb;
+    border: 1px solid #2563eb;
+}
+
+.technology {
+    margin-top: 25px;
+}
+
+.technology span {
+    display: inline-block;
+    border: 1px solid #e2e8f0;
+    background-color: white;
+    padding: 6px 12px;
+    margin-right: 5px;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+.hero-image {
+    position: relative;
+    text-align: center;
+}
+
+.profile-circle {
+    width: 280px;
+    height: 280px;
+    margin: auto;
+    border: 8px solid #2563eb;
+    border-radius: 50%;
+    padding: 8px;
+}
+
+.profile-circle img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.small-card {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    padding: 12px 18px;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px #00000015;
+}
+
+.small-card p {
+    color: #64748b;
+    font-size: 12px;
+}
+
+.python-card {
+    left: 0;
+    top: 40px;
+}
+
+.django-card {
+    right: 0;
+    bottom: 40px;
+}
+
+.statistics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 60px;
+}
+
+.stat {
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.stat h3 {
+    color: #2563eb;
+    font-size: 25px;
+}
+
+.stat p {
+    color: #64748b;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section {
+    padding: 85px 0;
+}
+
+.gray {
+    background-color: #f8fafc;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-title h2 {
+    font-size: 35px;
+    color: #0f172a;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.about-text h3 {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    color: #475569;
+    margin-bottom: 15px;
+}
+
+.about-info {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 25px;
+    border-radius: 6px;
+}
+
+.about-info div {
+    margin-bottom: 15px;
+}
+
+.about-info p {
+    color: #64748b;
+}
+
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.skill {
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    padding: 25px;
+    text-align: center;
+    border-radius: 6px;
+}
+
+.skill h3 {
+    color: #0f172a;
+}
+
+.skill p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+
+/* =========================
+   PROJECTS
+========================= */
+
+.projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+}
+
+.project {
+    border: 1px solid #e2e8f0;
+    padding: 30px;
+    border-radius: 6px;
+    background-color: white;
+}
+
+.project h3 {
+    font-size: 23px;
+    margin: 8px 0;
+}
+
+.project > p:not(.number):not(.tools) {
+    color: #475569;
+}
+
+.tools {
+    color: #2563eb;
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+.project-links {
+    margin-top: 20px;
+}
+
+.project-links a {
+    color: #2563eb;
+    margin-right: 15px;
+}
+
+
+/* =========================
+   EDUCATION
+========================= */
+
+.education {
+    display: grid;
+    gap: 18px;
+}
+
+.education-card {
+    background-color: white;
+    border-left: 4px solid #2563eb;
+    padding: 25px;
+}
+
+.education-card h3 {
+    margin: 8px 0;
+}
+
+.education-card p {
+    color: #64748b;
+}
+
+
+/* =========================
+   CERTIFICATES
+========================= */
+
+.certificates {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.certificate {
+    border: 1px solid #e2e8f0;
+    padding: 25px;
+    border-radius: 6px;
+    background-color: white;
+}
+
+.certificate h3 {
+    margin-bottom: 10px;
+}
+
+.certificate p {
+    color: #64748b;
+}
+
+.certificate a {
+    display: inline-block;
+    color: #2563eb;
+    margin-top: 15px;
+}
+
+
+/* =========================
+   INTERNSHIP
+========================= */
+
+.internship {
+    background-color: white;
+    border-left: 4px solid #2563eb;
+    padding: 30px;
+}
+
+.internship p {
+    color: #64748b;
+}
+
+.internship ul {
+    padding-left: 20px;
+    margin-top: 15px;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.contact h3 {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    color: #475569;
+    margin-bottom: 12px;
+}
+
+.contact-info a {
+    color: #2563eb;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #cbd5e1;
+    border-radius: 5px;
+    margin-bottom: 12px;
+    font-family: Arial, sans-serif;
+}
+
+form textarea {
+    height: 130px;
+    resize: vertical;
+}
+
+form button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 13px 22px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background-color: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+}
+
+footer p {
+    color: #cbd5e1;
+}
+
+.footer-links {
+    margin: 15px 0;
+}
+
+.footer-links a {
+    color: white;
+    margin: 0 10px;
+}
+
+
+/* =========================
+   DARK THEME
+========================= */
+
+#theme:checked ~ .website {
+    background-color: #0f172a;
+    color: #e2e8f0;
+}
+
+#theme:checked ~ .website header {
+    background-color: #0f172a;
+    border-color: #334155;
+}
+
+#theme:checked ~ .website .logo,
+#theme:checked ~ .website nav a,
+#theme:checked ~ .website .theme-button,
+#theme:checked ~ .website .section-title h2,
+#theme:checked ~ .website .hero h1,
+#theme:checked ~ .website .hero h2,
+#theme:checked ~ .website .about-text h3,
+#theme:checked ~ .website .skill h3 {
+    color: #f8fafc;
+}
+
+#theme:checked ~ .website .hero,
+#theme:checked ~ .website .gray {
+    background-color: #111827;
+}
+
+#theme:checked ~ .website .hero-text > p,
+#theme:checked ~ .website .about-text p,
+#theme:checked ~ .website .about-info p,
+#theme:checked ~ .website .project > p,
+#theme:checked ~ .website .contact-info p {
+    color: #cbd5e1;
+}
+
+#theme:checked ~ .website .about-info,
+#theme:checked ~ .website .skill,
+#theme:checked ~ .website .project,
+#theme:checked ~ .website .certificate,
+#theme:checked ~ .website .education-card,
+#theme:checked ~ .website .internship,
+#theme:checked ~ .website .stat,
+#theme:checked ~ .website .technology span,
+#theme:checked ~ .website .small-card {
+    background-color: #1e293b;
+    border-color: #334155;
+}
+
+#theme:checked ~ .website form input,
+#theme:checked ~ .website form textarea {
+    background-color: #1e293b;
+    color: white;
+    border-color: #475569;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 850px) {
+
+    .menu-button {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 5%;
+        right: 5%;
+        background-color: white;
+        border: 1px solid #e2e8f0;
+        padding: 15px;
+    }
+
+    nav a {
+        display: block;
+        padding: 8px;
+    }
+
+    #menu:checked ~ nav {
+        display: block;
+    }
+
+    .hero-content,
+    .about-content,
+    .contact {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        text-align: center;
+    }
+
+    .hero-text {
+        margin: auto;
+    }
+
+    .skills {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .certificates {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .statistics {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero h2 {
+        font-size: 22px;
+    }
+
+    .profile-circle {
+        width: 230px;
+        height: 230px;
+    }
+
+    .skills,
+    .projects,
+    .certificates,
+    .statistics {
+        grid-template-columns: 1fr;
+    }
+
+    .small-card {
+        display: none;
+    }
+}
