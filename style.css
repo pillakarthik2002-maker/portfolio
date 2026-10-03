@@ -601,6 +601,16 @@ footer p {
     color: white;
     border-color: #475569;
 }
+/* Dark mode mobile navigation */
+#theme:checked ~ .website nav {
+    background-color: #0f172a;
+    border-top-color: #334155;
+}
+
+#theme:checked ~ .website nav a {
+    color: #f8fafc;
+    border-bottom-color: #334155;
+}
 
 
 /* =========================
