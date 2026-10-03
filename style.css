@@ -1,3 +1,7 @@
+/* =========================
+   RESET
+========================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -35,14 +39,20 @@ header {
     border-bottom: 1px solid #e2e8f0;
     position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: 1000;
 }
+
+
+/* =========================
+   NAVBAR
+========================= */
 
 .navbar {
     min-height: 70px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 }
 
 .logo {
@@ -67,15 +77,11 @@ nav a:hover {
     color: #2563eb;
 }
 
-.theme-button {
-    border: 1px solid #cbd5e1;
-    padding: 6px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    color: #0f172a;
-}
 
-#theme,
+/* =========================
+   MENU
+========================= */
+
 #menu {
     display: none;
 }
@@ -84,6 +90,19 @@ nav a:hover {
     display: none;
     font-size: 25px;
     cursor: pointer;
+}
+
+
+/* =========================
+   THEME BUTTON
+========================= */
+
+.theme-button {
+    border: 1px solid #cbd5e1;
+    padding: 6px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #0f172a;
 }
 
 
@@ -128,7 +147,7 @@ nav a:hover {
     margin-bottom: 15px;
 }
 
-.hero-text > p {
+.hero-text>p {
     color: #475569;
     max-width: 650px;
 }
@@ -163,8 +182,13 @@ nav a:hover {
     padding: 6px 12px;
     margin-right: 5px;
     border-radius: 4px;
-    font-size: 13px;
+    font-size: 15px;
 }
+
+
+/* =========================
+   HERO IMAGE
+========================= */
 
 .hero-image {
     position: relative;
@@ -210,6 +234,11 @@ nav a:hover {
     right: 0;
     bottom: 40px;
 }
+
+
+/* =========================
+   STATISTICS
+========================= */
 
 .statistics {
     display: grid;
@@ -345,7 +374,7 @@ nav a:hover {
     margin: 8px 0;
 }
 
-.project > p:not(.number):not(.tools) {
+.project>p:not(.number):not(.tools) {
     color: #475569;
 }
 
@@ -519,55 +548,55 @@ footer p {
    DARK THEME
 ========================= */
 
-#theme:checked ~ .website {
+#theme:checked~.website {
     background-color: #0f172a;
     color: #e2e8f0;
 }
 
-#theme:checked ~ .website header {
+#theme:checked~.website header {
     background-color: #0f172a;
     border-color: #334155;
 }
 
-#theme:checked ~ .website .logo,
-#theme:checked ~ .website nav a,
-#theme:checked ~ .website .theme-button,
-#theme:checked ~ .website .section-title h2,
-#theme:checked ~ .website .hero h1,
-#theme:checked ~ .website .hero h2,
-#theme:checked ~ .website .about-text h3,
-#theme:checked ~ .website .skill h3 {
+#theme:checked~.website .logo,
+#theme:checked~.website nav a,
+#theme:checked~.website .theme-button,
+#theme:checked~.website .section-title h2,
+#theme:checked~.website .hero h1,
+#theme:checked~.website .hero h2,
+#theme:checked~.website .about-text h3,
+#theme:checked~.website .skill h3 {
     color: #f8fafc;
 }
 
-#theme:checked ~ .website .hero,
-#theme:checked ~ .website .gray {
+#theme:checked~.website .hero,
+#theme:checked~.website .gray {
     background-color: #111827;
 }
 
-#theme:checked ~ .website .hero-text > p,
-#theme:checked ~ .website .about-text p,
-#theme:checked ~ .website .about-info p,
-#theme:checked ~ .website .project > p,
-#theme:checked ~ .website .contact-info p {
+#theme:checked~.website .hero-text>p,
+#theme:checked~.website .about-text p,
+#theme:checked~.website .about-info p,
+#theme:checked~.website .project>p,
+#theme:checked~.website .contact-info p {
     color: #cbd5e1;
 }
 
-#theme:checked ~ .website .about-info,
-#theme:checked ~ .website .skill,
-#theme:checked ~ .website .project,
-#theme:checked ~ .website .certificate,
-#theme:checked ~ .website .education-card,
-#theme:checked ~ .website .internship,
-#theme:checked ~ .website .stat,
-#theme:checked ~ .website .technology span,
-#theme:checked ~ .website .small-card {
+#theme:checked~.website .about-info,
+#theme:checked~.website .skill,
+#theme:checked~.website .project,
+#theme:checked~.website .certificate,
+#theme:checked~.website .education-card,
+#theme:checked~.website .internship,
+#theme:checked~.website .stat,
+#theme:checked~.website .technology span,
+#theme:checked~.website .small-card {
     background-color: #1e293b;
     border-color: #334155;
 }
 
-#theme:checked ~ .website form input,
-#theme:checked ~ .website form textarea {
+#theme:checked~.website form input,
+#theme:checked~.website form textarea {
     background-color: #1e293b;
     color: white;
     border-color: #475569;
@@ -575,34 +604,57 @@ footer p {
 
 
 /* =========================
-   MOBILE
+   TABLET / MOBILE
 ========================= */
 
 @media (max-width: 850px) {
 
+    .navbar {
+        flex-wrap: wrap;
+        position: relative;
+    }
+
     .menu-button {
         display: block;
+        font-size: 25px;
+        cursor: pointer;
+    }
+
+    .theme-button {
+        margin-left: 10px;
     }
 
     nav {
         display: none;
-        position: absolute;
-        top: 70px;
-        left: 5%;
-        right: 5%;
+
+        width: 100%;
+
+        flex-direction: column;
+        gap: 0;
+
         background-color: white;
-        border: 1px solid #e2e8f0;
-        padding: 15px;
+
+        padding: 10px 0;
+
+        border-top: 1px solid #e2e8f0;
+    }
+
+    #menu:checked~nav {
+        display: flex;
     }
 
     nav a {
         display: block;
-        padding: 8px;
+        padding: 12px 20px;
+        border-bottom: 1px solid #e2e8f0;
     }
 
-    #menu:checked ~ nav {
-        display: block;
+    nav a:last-child {
+        border-bottom: none;
     }
+
+
+    /* Main content */
 
     .hero-content,
     .about-content,
@@ -631,7 +683,97 @@ footer p {
     }
 }
 
-@media (max-width: 550px) {
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        min-height: 60px;
+
+        display: grid;
+        grid-template-columns: 1fr auto auto;
+
+        align-items: center;
+
+        position: relative;
+    }
+
+    .logo {
+        grid-column: 1;
+    }
+
+    .logo h2 {
+        font-size: 24px;
+    }
+
+    .menu-button {
+        grid-column: 2;
+
+        display: block;
+
+        font-size: 24px;
+
+        cursor: pointer;
+
+        margin-right: 15px;
+    }
+
+    .theme-button {
+        grid-column: 3;
+
+        margin: 0;
+
+        font-size: 14px;
+
+        padding: 6px 8px;
+    }
+
+
+    /* Mobile navigation */
+
+    nav {
+        grid-column: 1 / -1;
+
+        position: static;
+
+        display: none;
+
+        width: 100%;
+
+        flex-direction: column;
+
+        gap: 0;
+
+        background-color: white;
+
+        border-top: 1px solid #e2e8f0;
+
+        padding: 5px 0;
+
+        box-shadow: none;
+    }
+
+    #menu:checked~nav {
+        display: flex;
+    }
+
+    nav a {
+        display: block;
+
+        padding: 10px 20px;
+
+        border-bottom: 1px solid #e2e8f0;
+    }
+
+    nav a:last-child {
+        border-bottom: none;
+    }
+
+
+    /* Hero */
 
     .hero h1 {
         font-size: 40px;
@@ -646,6 +788,9 @@ footer p {
         height: 230px;
     }
 
+
+    /* One column */
+
     .skills,
     .projects,
     .certificates,
@@ -653,7 +798,49 @@ footer p {
         grid-template-columns: 1fr;
     }
 
+
+    /* Hide floating cards */
+
     .small-card {
         display: none;
+    }
+}
+
+
+/* =========================
+   VERY SMALL MOBILE
+========================= */
+
+@media (max-width: 400px) {
+
+    .container {
+        width: 92%;
+    }
+
+    .logo h2 {
+        font-size: 22px;
+    }
+
+    .menu-button {
+        font-size: 23px;
+        margin-right: 10px;
+    }
+
+    .theme-button {
+        font-size: 13px;
+        padding: 5px 7px;
+    }
+
+    nav a {
+        padding: 9px 15px;
+        font-size: 14px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero h2 {
+        font-size: 20px;
     }
 }
