@@ -85,6 +85,9 @@ nav a:hover {
 #menu {
     display: none;
 }
+#theme {
+    display: none;
+}
 
 .menu-button {
     display: none;
